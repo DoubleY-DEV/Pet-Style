@@ -1,0 +1,331 @@
+@charset "UTF-8";
+.footer {
+  background-color: #F8FAFF;
+  padding: 1.875em 5.0625em 2.125em;
+}
+.footer__top {
+  padding: 0 0.375em 0.875em 5.25em;
+  border-bottom: 0.125em solid #0C2638;
+  position: relative;
+  z-index: 2;
+}
+.footer__center {
+  padding: 0.875em 0.375em 0.875em 5.25em;
+  position: relative;
+}
+.footer__bottom {
+  padding: 9.1875em 18.625em 0;
+  position: relative;
+}
+
+.f-social {
+  display: flex;
+  justify-content: flex-end;
+}
+.f-social__item {
+  display: block;
+  margin-left: 1.5625em;
+}
+.f-social__item:first-child {
+  margin-left: 0;
+}
+.f-social__link {
+  width: 2.3125em;
+  height: 2.3125em;
+  display: block;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.f-up {
+  background-image: url(../img/icons/arrow-up.svg);
+  display: block;
+  width: 2.1875em;
+  height: 2.1875em;
+  background-color: #0C2638;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 1.3125em auto;
+  background-size: 1.3125em auto;
+  border-radius: 0.625em;
+  -webkit-border-radius: 0.625em;
+  position: absolute;
+  bottom: -1.125em;
+  left: 50%;
+  margin-left: -0.65625em;
+}
+
+.f-address {
+  max-width: 12.2666666667em;
+}
+
+.f-logo {
+  position: absolute;
+  left: 50%;
+  top: 3.25em;
+  margin-left: -4.65625em;
+}
+.f-logo__link {
+  display: block;
+  width: 9.3125em;
+  height: auto;
+}
+.f-logo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.f-info__title {
+  text-align: center;
+}
+.f-info__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 38.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5625em;
+}
+.f-info__text {
+  font-weight: 700;
+  text-align: left;
+}
+.f-info__copy {
+  margin-top: 3.4666666667em;
+  text-align: center;
+}
+.f-info__copy a:hover {
+  text-decoration: underline;
+}
+
+.f-dog {
+  position: absolute;
+  left: 0.25em;
+  bottom: -0.9375em;
+}
+.f-dog__img {
+  display: block;
+  width: 19.5625em;
+  height: auto;
+}
+
+/* Модалки */
+.modal {
+  width: 58em;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+}
+
+.m-img {
+  width: 50%;
+  -webkit-background-size: 175% auto;
+  background-size: 175% auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  border-radius: 1.5em 0 0 1.5em;
+  -webkit-border-radius: 1.5em 0 0 1.5em;
+  position: relative;
+}
+.m-img__logo {
+  display: block;
+  width: 8.9375em;
+  height: 8.875em;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2.0625em;
+  bottom: 1.0625em;
+}
+
+.m-info {
+  background-color: #ffffff;
+  width: 50%;
+  padding: 3.6875em 2.4375em 3.375em;
+  border-radius: 0 1.5em 1.5em 0;
+  -webkit-border-radius: 0 1.5em 1.5em 0;
+  text-align: center;
+}
+.m-info__title {
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+.m-info__input {
+  margin-bottom: 1.2222222222em;
+}
+.m-info__button {
+  margin-top: 0.375em;
+}
+
+.navigator {
+  padding: 0.875em 2.75em 0.6875em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FCFBFC;
+  z-index: 99;
+  display: none;
+}
+
+.n-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.n-menu__item {
+  display: block;
+}
+.n-menu__link {
+  display: block;
+  opacity: 0.6;
+}
+.n-menu__link-active {
+  opacity: 1;
+}
+.n-menu__icon {
+  width: 1.5625em;
+  height: 1.5625em;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.n-menu__title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #0C2638;
+  font-size: 0.75em;
+}
+
+/* Мобильные popup */
+.m-contacts {
+  padding: 0.75em 2.5em 0.9375em;
+  border-top: 0.0625em solid #E6E6E6;
+}
+.m-contacts__title {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #032640;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.1em;
+}
+.m-contacts__info {
+  display: block;
+  font-size: 0.9375em;
+  color: #576778;
+  line-height: 1.7;
+}
+.m-contacts__info a {
+  font-size: 0.9333333333em;
+  font-weight: 600;
+  color: #576778;
+}
+
+.m-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.75em 2.5em 0.9375em;
+  border-top: 0.0625em solid #E6E6E6;
+}
+.m-social__title {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #032640;
+  display: block;
+}
+.m-social__list {
+  display: flex;
+  justify-content: flex-end;
+}
+.m-social__item {
+  display: block;
+  margin-left: 2.125em;
+}
+.m-social__item:first-child {
+  margin-left: 0;
+}
+.m-social__link {
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.m-wholesalers {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4375em;
+  margin-bottom: 2.3125em;
+}
+.m-wholesalers__button {
+  font-weight: 500;
+  display: inline-block;
+}
+
+.m-title {
+  margin-top: 0.7em;
+  display: block;
+  text-align: center;
+  padding-left: 2.85em;
+  padding-right: 2.85em;
+}
+
+.m-catalog {
+  padding: 2.0625em 3.5625em 2.4375em;
+}
+.m-catalog__item {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25em;
+}
+.m-catalog__item:last-child {
+  margin-bottom: 0;
+}
+.m-catalog__link {
+  font-size: 0.9375em;
+  color: #032640;
+  display: block;
+  position: relative;
+  padding-left: 3.1875em;
+  font-weight: 500;
+}
+.m-catalog__link:hover {
+  font-weight: 700;
+}
+.m-catalog__link:hover .m-catalog__icon {
+  background-color: #FCD039;
+}
+.m-catalog__icon {
+  display: block;
+  width: 2.3333333333em;
+  height: 2em;
+  background-color: #E6EEFF;
+  border-radius: 0.3333333333em;
+  position: absolute;
+  left: 0;
+  top: -0.4em;
+  -webkit-background-size: 1.3333333333em 1.3333333333em;
+  background-size: 1.3333333333em 1.3333333333em;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

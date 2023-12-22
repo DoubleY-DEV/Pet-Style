@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Картка товару</title>
+
+    <!-- Мета теги -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <!-- Подключение шрифтов -->
+    <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+    <link rel="stylesheet" href="fonts/Montserrat/stylesheet.css">
+
+    <!-- Подключение плагинов (стили) -->
+    <!--<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css?v5.0.2">-->
+    <link rel="stylesheet" href="libs/slick/slick.css?v1.8.1">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- Подключение стилей сайта -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+<!-- Динамический размер шрифта (desktop) -->
+<script type="text/javascript">
+    if(window.innerWidth > 767) {
+        var proportion = 1440/16;
+        function resizeFont() { document.body.style.fontSize = parseInt(document.body.offsetWidth/proportion) + 'px' }
+        onload = onresize = resizeFont;
+        if (document.addEventListener) document.addEventListener("DOMContentLoaded", resizeFont, null);
+    }
+</script>
+
+<!-- <img alt="" data-src="/local/templates/site/img/logo.webp" class="logo-img"> -->
+<!-- <div class="port-item-new" data-bg="/upload/iblock/faf1/m01qfgi7ld3qnbfa0eglxadz7j0lmf5x.webp"> -->
+
+<!-- Шапка сайта -->
+<header class="header header-desc">
+    <div class="header__logo">
+        <a href="/" class="h-logo">
+            <img src="img/header/logo.svg" alt="LOGO" class="h-logo__img">
+        </a>
+    </div>
+    <div class="header__top">
+        <div class="container container-jcsb container-aic">
+            <div class="h-info">
+                <ul class="h-social">
+                    <li class="h-social__item">
+                        <a href="#" class="h-social__link" style="background-image: url(img/header/social/facebook.svg);"></a>
+                    </li>
+                    <li class="h-social__item">
+                        <a href="#" class="h-social__link" style="background-image: url(img/header/social/instagram.svg);"></a>
+                    </li>
+                </ul>
+                <div class="h-lang fz16 ff-Montserrat">
+                    <a href="javascript:void(0);" class="h-lang__current">
+                        UA
+                    </a>
+                    <ul class="h-lang__list" style="display: none;">
+                        <li class="h-lang__item">
+                            <a href="#" class="h-lang__link">
+                                UA
+                            </a>
+                        </li>
+                        <li class="h-lang__item">
+                            <a href="#" class="h-lang__link">
+                                RU
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="h-working fz15">
+                    ПН-ПТ з 10.00-18.00;  СБ з 10,00 до 14,00
+                </div>
+            </div>
+
+            <ul class="h-menu fz15">
+                <li class="h-menu__item">
+                    <a href="#" class="h-menu__link">
+                        Доставка та оплата
+                    </a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="#" class="h-menu__link">
+                        Повернення та обмін
+                    </a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="#" class="h-menu__link">
+                        Про нас
+                    </a>
+                </li>
+                <li class="h-menu__item">
+                    <a href="#" class="h-menu__link">
+                        Контакти
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="container container-jcsb container-aic">
+
+            <ul class="h-nav fz20">
+                <li class="h-nav__item h-nav__item-sub">
+                    <a href="#" class="h-nav__link">
+                        Каталог
+                    </a>
+                    <div class="h-nav__submenu" style="display: none;">
+                        <div class="h-nav__submenu__wrapper">
+                            <div class="container container-jcsb">
+                                <ul class="h-catalog">
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/1.svg);"></i>
+                                            Худі, кофти, светри та світшоти
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/2.svg);"></i>
+                                            Зимові куртки та теплі комбінезони
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/3.svg);"></i>
+                                            Костюми
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/4.svg);"></i>
+                                            Новорічний та різдвяний одяг
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/5.svg);"></i>
+                                            В’язані речі
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/6.svg);"></i>
+                                            Дощовики та осінньо-весняні куртки
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/7.svg);"></i>
+                                            Жилетки
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/8.svg);"></i>
+                                            Шлейки та повідці
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/9.svg);"></i>
+                                            Футболки та майки
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/10.svg);"></i>
+                                            Плаття/Спідниці
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/11.svg);"></i>
+                                            Піжами
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/12.svg);"></i>
+                                            Взуття
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/13.svg);"></i>
+                                            Аксесуари та засоби догляду
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/14.svg);"></i>
+                                            Лежаки та спальні місця
+                                        </a>
+                                    </li>
+                                    <li class="h-catalog__item">
+                                        <a href="#" class="h-catalog__link">
+                                            <i class="h-catalog__icon" style="background-image: url(img/category/15.svg);"></i>
+                                            Переноски
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="h-banner" style="background-image: url(img/header/banner.jpg);">
+                                    <div class="h-banner__content">
+                                        <div class="h-banner__title">
+                                            Тепла осінь
+                                        </div>
+                                        <div class="h-banner__discount">
+                                            <div class="h-banner__additionally">
+                                                Знижки<br>до
+                                            </div>
+                                            <div class="h-banner__percent">
+                                                50%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="h-nav__item">
+                    <a href="#" class="h-nav__link">
+                        Сезонні знижки
+                    </a>
+                </li>
+                <li class="h-nav__item">
+                    <a href="#" class="h-nav__link">
+                        Новинки
+                    </a>
+                </li>
+                <li class="h-nav__item">
+                    <a href="#" class="h-nav__link">
+                        Розпродаж
+                    </a>
+                </li>
+            </ul>
+
+            <div class="h-panel">
+                <a href="#" class="h-wholesalers button button-1 fz18">
+                    Оптовим клієнтам
+                </a>
+                <ul class="h-shop">
+                    <li class="h-shop__item">
+                        <a href="#" class="h-shop__link" style="background-image: url(img/icons/button/search.svg);"></a>
+                    </li>
+                    <li class="h-shop__item">
+                        <a href="#" class="h-shop__link" style="background-image: url(img/icons/button/paw.svg);">
+                            <span class="h-shop__count">1</span>
+                        </a>
+                    </li>
+                    <li class="h-shop__item">
+                        <a href="#" class="h-shop__link" style="background-image: url(img/icons/button/basket.svg);">
+                            <span class="h-shop__count">10</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="header__catalog" style="display: none;">
+
+    </div>
+</header>
+
+<header class="header header-mob">
+    <div class="container container-jcsb container-aic">
+        <a href="/" class="h-logo">
+            <img src="img/footer/logo.svg" alt="LOGO" class="h-logo__img">
+        </a>
+        <a href="javascript:void(0);" class="h-burger"></a>
+        <button style="display: none;" data-fancybox data-src="#header-menu"></button>
+    </div>
+</header>
+
+<div class="page">
+
+    <div class="section s8">
+        <div class="container container-noflex">
+            <ul class="s8-breadcrumbs">
+                <li class="s8-breadcrumbs__item">
+                    <a href="/" class="s8-breadcrumbs__link" style="background-image: url(img/icons/home.svg);"></a>
+                </li>
+                <li class="s8-breadcrumbs__item">
+                    <a href="/" class="s8-breadcrumbs__link">
+                        Каталог
+                    </a>
+                </li>
+                <li class="s8-breadcrumbs__item">
+                    <a href="/" class="s8-breadcrumbs__link">
+                        Костюми
+                    </a>
+                </li>
+                <li class="s8-breadcrumbs__item">
+                    <a href="/" class="s8-breadcrumbs__link">
+                        Класичний светр червоний для маленьких тварин, тепла кофточка для котів, кішок, цуценят і собак
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section s11">
+        <div class="container container-jcsb container-aic">
+            <div class="s11-slider">
+
+                <div class="s11-slider__nav">
+
+                    <div class="s11-slider__nav__item">
+                        <div class="s11-slider__nav__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__nav__item">
+                        <div class="s11-slider__nav__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__nav__item">
+                        <div class="s11-slider__nav__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__nav__item">
+                        <div class="s11-slider__nav__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__nav__item">
+                        <div class="s11-slider__nav__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+
+                </div>
+
+                <div class="s11-slider__for">
+
+                    <div class="s11-slider__for__item">
+                        <div class="s11-slider__for__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__for__item">
+                        <div class="s11-slider__for__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__for__item">
+                        <div class="s11-slider__for__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__for__item">
+                        <div class="s11-slider__for__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+                    <div class="s11-slider__for__item">
+                        <div class="s11-slider__for__photo" style="background-image: url(img/product/1.webp);"></div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="s11-info">
+
+                <div class="s11-info__title fw600">
+                    Класичний светр червоний для маленьких тварин, тепла кофточка для котів, кішок, цуценят і собак
+                </div>
+                <div class="s11-info__code">
+                    Код: M0690
+                </div>
+
+                <div class="s11-options">
+                    <div class="s11-options__title">
+                        Доступні розміри:
+                    </div>
+                    <ul class="s11-options__list">
+                        <li class="s11-options__item">
+                            <a href="#" class="s11-options__link s11-options__link-active">
+                                S
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="#" class="s11-options__link">
+                                M
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="#" class="s11-options__link">
+                                L
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="#" class="s11-options__link">
+                                XL
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="javascript:void(0);" class="s11-options__link s11-options__link-disable">
+                                2XL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="s11-options">
+                    <div class="s11-options__title">
+                        Ця модель в інших кольрах:
+                    </div>
+                    <ul class="s11-options__list s11-options__list-color">
+                        <li class="s11-options__item">
+                            <a href="#" class="s11-options__link s11-options__link-active">
+                                <span class="s11-options__color" style="background-color: #893F3F;"></span>
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="#" class="s11-options__link">
+                                <span class="s11-options__color" style="background-color: #5F893F;"></span>
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="#" class="s11-options__link s11-options__link-disable">
+                                <span class="s11-options__color" style="background-color: #3F6589;"></span>
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="javascript:void(0);" class="s11-options__link s11-options__link-disable">
+                                <span class="s11-options__color" style="background-color: #883F89;"></span>
+                            </a>
+                        </li>
+                        <li class="s11-options__item">
+                            <a href="javascript:void(0);" class="s11-options__link s11-options__link-disable" style="color: #fff;">
+                                <span class="s11-options__color" style="background-color: #250E25;"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="s11-info__price">
+                    170,00 грн
+                </div>
+
+                <div class="s11-info__bottom">
+
+                    <div class="s11-counter">
+                        <a href="javascript:void(0);" class="s11-counter__button s11-counter__button-minus" name="minus"></a>
+                        <input type="number" class="s11-counter__input" value="1" min="1" step="1" readonly>
+                        <a href="javascript:void(0);" class="s11-counter__button s11-counter__button-plus" name="plus"></a>
+                    </div>
+
+                    <a href="#" class="s11-info__button button button-2">
+                        Замовити
+                    </a>
+
+                    <a href="#" class="s11-favorites"></a>
+
+                </div>
+
+            </div>
+
+            <div class="s11-line"></div>
+        </div>
+    </div>
+
+    <div class="s12 section">
+        <div class="container container-jcsb">
+            <ul class="s12-faq">
+               <li class="s12-faq__item">
+                   <a href="javascript:void(0);" class="s12-faq__top">
+                       <span class="s12-faq__title">
+                           Як підібрати одяг для собаки?
+                       </span>
+                       <span class="s12-faq__char" data-close="+" data-open="-">+</span>
+                   </a>
+                   <div class="s12-faq__content description" style="display: none;">
+                       <b>Класичний светр</b> - це стильний і теплий пуловер для котів, цуценят та собак. Він виготовлений з високоякісного матеріалу, який забезпечує комфорт і тепло в холодні дні. Свитер має прекрасну посадку і облягає тіло вашої домашньої тварини, захищаючи її від холоду і створюючи затишну атмосферу. Він ідеально підходить для тварин, які хочуть виглядати стильно і почувати себе комфортно. Класичний дизайн светра робить його універсальним і підходящим для будь-якої нагоди. Одягати светер на вашого улюбленця легко і швидко, і ви можете бути впевнені, що він буде чудово виглядати в цьому теплому і модному одязі.
+                   </div>
+               </li>
+                <li class="s12-faq__item">
+                    <a href="javascript:void(0);" class="s12-faq__top">
+                       <span class="s12-faq__title">
+                           Яка вартість доставки?
+                       </span>
+                        <span class="s12-faq__char" data-close="+" data-open="-">+</span>
+                    </a>
+                    <div class="s12-faq__content description" style="display: none;">
+                        <b>Класичний светр</b> - це стильний і теплий пуловер для котів, цуценят та собак. Він виготовлений з високоякісного матеріалу, який забезпечує комфорт і тепло в холодні дні. Свитер має прекрасну посадку і облягає тіло вашої домашньої тварини, захищаючи її від холоду і створюючи затишну атмосферу. Він ідеально підходить для тварин, які хочуть виглядати стильно і почувати себе комфортно. Класичний дизайн светра робить його універсальним і підходящим для будь-якої нагоди. Одягати светер на вашого улюбленця легко і швидко, і ви можете бути впевнені, що він буде чудово виглядати в цьому теплому і модному одязі.
+                    </div>
+                </li>
+                <li class="s12-faq__item">
+                    <a href="javascript:void(0);" class="s12-faq__top">
+                       <span class="s12-faq__title">
+                           Оплата на сайті....?
+                       </span>
+                        <span class="s12-faq__char" data-close="+" data-open="-">+</span>
+                    </a>
+                    <div class="s12-faq__content description" style="display: none;">
+                        <b>Класичний светр</b> - це стильний і теплий пуловер для котів, цуценят та собак. Він виготовлений з високоякісного матеріалу, який забезпечує комфорт і тепло в холодні дні. Свитер має прекрасну посадку і облягає тіло вашої домашньої тварини, захищаючи її від холоду і створюючи затишну атмосферу. Він ідеально підходить для тварин, які хочуть виглядати стильно і почувати себе комфортно. Класичний дизайн светра робить його універсальним і підходящим для будь-якої нагоди. Одягати светер на вашого улюбленця легко і швидко, і ви можете бути впевнені, що він буде чудово виглядати в цьому теплому і модному одязі.
+                    </div>
+                </li>
+            </ul>
+            <div class="s12-paw" style="background-image: url(img/layout/paw.svg);"></div>
+        </div>
+    </div>
+
+    <div class="s13 section">
+        <div class="container container-noflex">
+            <ul class="s13-tabs">
+                <li class="s13-tabs__item">
+                    <a href="javascript:void(0);" class="s13-tabs__link" data-id="1">
+                        Опис
+                    </a>
+                </li>
+                <li class="s13-tabs__item">
+                    <a href="javascript:void(0);" class="s13-tabs__link" data-id="2">
+                        Відгуки
+                    </a>
+                </li>
+                <li class="s13-tabs__item">
+                    <a href="javascript:void(0);" class="s13-tabs__link" data-id="3">
+                        Доставка та оплата
+                    </a>
+                </li>
+            </ul>
+
+            <div class="s13-content">
+                <div class="s13-content__area" data-id="1">
+                    <div class="s13-description description">
+                        <div class="s13-description__wrapper">
+                            <h4 style="font-weight: 600">
+                                Опис
+                            </h4>
+                            <p>
+                                Класичний светр - це стильний і теплий пуловер для котів, цуценят та собак. Він виготовлений з високоякісного матеріалу, який забезпечує комфорт і тепло в холодні дні. Свитер має прекрасну посадку і облягає тіло вашої домашньої тварини, захищаючи її від холоду і створюючи затишну атмосферу. Він ідеально підходить для тварин, які хочуть виглядати стильно і почувати себе комфортно. Класичний дизайн светра робить його універсальним і підходящим для будь-якої нагоди. Одягати светер на вашого улюбленця легко і швидко, і ви можете бути впевнені, що він буде чудово виглядати в цьому теплому і модному одязі.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="s13-sizer">
+                        <div class="s13-sizer__left">
+                            <div class="s13-sizer__title fw700">
+                                Розмірна сітка
+                            </div>
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th>Розмір</th>
+                                    <th>Обхват грудей, см</th>
+                                    <th>Довжина спинки, см</th>
+                                </tr>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>30</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>35</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>40</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>45</td>
+                                    <td>35</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>50</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>2XL</td>
+                                    <td>58</td>
+                                    <td>45</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="s13-sizer__text s13-sizer__dop">
+                                *Допустиме відхилення від розмірної сітки  +/-10%
+                            </div>
+                        </div>
+                        <div class="s13-sizer__right">
+                            <div class="s13-warning">
+                                <div class="s13-warning__top">
+                                    <div class="s13-warning__tag">
+                                        Увага!
+                                    </div>
+                                    <div class="s13-sizer__text s13-warning__text">
+                                        <b>Заміряти необхідно тільки в положенні стоячи!</b>
+                                        Довжина спини, це тільки спина, без довжини шиї та хвостика
+                                    </div>
+                                </div>
+                                <img src="img/product/dog.png" alt="dog" class="s13-warning__dog">
+                                <ul class="s13-warning__list">
+                                    <li class="s13-warning__list__item">
+                                        1 Спина
+                                    </li>
+                                    <li class="s13-warning__list__item">
+                                        3 Шия
+                                    </li>
+                                    <li class="s13-warning__list__item">
+                                        2 Груди
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s13-content__area" data-id="2" style="display: none;">
+                    <div class="s13-description description">
+                        <div class="s13-description__wrapper">
+                            <h4 style="font-weight: 600">
+                                Відгуки
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="s13-content__area" data-id="3" style="display: none;">
+                    <div class="s13-description description">
+                        <div class="s13-description__wrapper">
+                            <h4 style="font-weight: 600">
+                                Доставка та оплата
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section s4">
+        <div class="container">
+            <div class="s4-discount">
+                <div class="s4-discount__left">
+                    <div class="s4-discount__title">
+                        Знижка кожному
+                    </div>
+                    <div class="s4-discount__value">
+                        <img class="s4-discount__percent" src="img/discount/5-percent.svg" alt="5">
+                        за підписку
+                        <span class="mob-show">за позитивний відгук</span>
+                    </div>
+                </div>
+                <div class="s4-discount__center">
+                    <img class="s4-discount__qr" src="img/discount/qr.svg" alt="qr">
+                </div>
+                <div class="s4-discount__right">
+                    <div class="s4-discount__value">
+                        <img class="s4-discount__percent" src="img/discount/5-percent.svg" alt="5">
+                        за позитивний відгук
+                    </div>
+                </div>
+                <a href="#" class="s4-discount__plus"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section s6 s6-layout">
+        <div class="container container-noflex">
+            <div class="s6-info">
+                <div class="s6-info__title fz35 fw700">
+                    Рекомендуємо
+                </div>
+            </div>
+            <div class="s6-slider">
+
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites product__favorites-active"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="javascript:void(0);" class="product__size__link product__size__link-disable">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s6-slider__item">
+                    <div class="product">
+                        <div class="product__top">
+                            <div class="product__photo" style="background-image: url(img/product/1.webp);"></div>
+                            <div class="product__mark product__mark-last">Останній розмір</div>
+                            <div class="product__mark product__mark-season">Сезонні знижки</div>
+                            <a href="#" class="product__favorites"></a>
+                        </div>
+                        <div class="product__content">
+                            <a href="#" class="product__title">
+                                Тепла зимова куртка з флісовою підкладкою, капюшоном та кишенями для цуценят та ...
+                            </a>
+                            <ul class="product__size">
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        S
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        M
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        L
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        XL
+                                    </a>
+                                </li>
+                                <li class="product__size__item">
+                                    <a href="#" class="product__size__link">
+                                        2XL
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="product__code">
+                                Код: 0510
+                            </div>
+                            <div class="product__bottom">
+                                <div class="product__price">
+                                    660,00 грн
+                                </div>
+                                <a href="#" class="product__basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container container-jcsb container-aic">
+            <div class="f-char char">
+                U・ᴥ・U
+            </div>
+            <ul class="f-social">
+                <li class="f-social__item">
+                    <a href="#" class="f-social__link" style="background-image: url(img/footer/social/facebook.svg);"></a>
+                </li>
+                <li class="f-social__item">
+                    <a href="#" class="f-social__link" style="background-image: url(img/footer/social/instagram.svg);"></a>
+                </li>
+                <li class="f-social__item">
+                    <a href="#" class="f-social__link" style="background-image: url(img/footer/social/viber.svg);"></a>
+                </li>
+                <li class="f-social__item">
+                    <a href="#" class="f-social__link" style="background-image: url(img/footer/social/telegram.svg);"></a>
+                </li>
+            </ul>
+            <a href="javascript:void(0);" class="f-up"></a>
+        </div>
+    </div>
+    <div class="footer__center container container-jcsb container-aic">
+        <div class="f-address fz15">
+            54028  вул. Космонавтів 124 кв. 16, Миколаїв, Україна
+        </div>
+        <ul class="h-menu f-menu fz15">
+            <li class="h-menu__item f-menu__item">
+                <a href="#" class="h-menu__link f-menu__link">
+                    Доставка та оплата
+                </a>
+            </li>
+            <li class="h-menu__item f-menu__item">
+                <a href="#" class="h-menu__link f-menu__link">
+                    Повернення та обмін
+                </a>
+            </li>
+            <li class="h-menu__item f-menu__item">
+                <a href="#" class="h-menu__link f-menu__link">
+                    Про нас
+                </a>
+            </li>
+            <li class="h-menu__item f-menu__item">
+                <a href="#" class="h-menu__link f-menu__link">
+                    Контакти
+                </a>
+            </li>
+        </ul>
+        <div class="f-logo">
+            <a href="/" class="f-logo__link">
+                <img src="img/footer/logo.svg" alt="LOGO" class="f-logo__img">
+            </a>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container container-noflex">
+            <div class="f-info">
+                <div class="f-info__title fz35 fw700">
+                    Залишились питання?
+                </div>
+                <div class="f-info__row">
+                    <div class="f-info__text">ПН-ПТ з 10.00-18.00<br>СБ з 10,00 до 14,00</div>
+                    <button data-fancybox data-src="#feedback-form" class="f-info__button button button-3">
+                        Зв’яжіться зі мною
+                    </button>
+                    <div class="f-info__text">+380 (93) 107-03-04<br>+380 (99) 107-03-04</div>
+                </div>
+                <div class="f-info__copy fz15">
+                    "Pet Style" одяг для тварин котів та собак | <a href="https://my.prom.ua/report_abuse">Поскаржитися на контент</a> | <a href="https://my.prom.ua/privacy-policy">Політика конфіденційності</a>
+                </div>
+            </div>
+            <div class="f-dog">
+                <img src="img/footer/dog.png" alt="dog" class="f-dog__img">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="navigator">
+    <div class="container container-noflex">
+        <ul class="n-menu">
+            <li class="n-menu__item">
+                <a href="#" class="n-menu__link n-menu__link-active">
+                    <i class="n-menu__icon" style="background-image: url(img/icons/navigator/5.svg);"></i>
+                    <span class="n-menu__title">
+							Головна
+						</span>
+                </a>
+            </li>
+            <li class="n-menu__item">
+                <a href="javascript:void(0);" class="n-menu__link n-menu__link-catalog">
+                    <i class="n-menu__icon" style="background-image: url(img/icons/navigator/4.svg);"></i>
+                    <span class="n-menu__title">
+							Каталог
+						</span>
+                </a>
+                <button style="display: none;" data-fancybox data-src="#categorys-more"></button>
+            </li>
+            <li class="n-menu__item">
+                <a href="#" class="n-menu__link">
+                    <i class="n-menu__icon" style="background-image: url(img/icons/navigator/3.svg);"></i>
+                    <span class="n-menu__title">
+							Пошук
+						</span>
+                </a>
+            </li>
+            <li class="n-menu__item">
+                <a href="#" class="n-menu__link">
+                    <i class="n-menu__icon" style="background-image: url(img/icons/navigator/2.svg);"></i>
+                    <span class="n-menu__title">
+							Обране
+						</span>
+                </a>
+            </li>
+            <li class="n-menu__item">
+                <a href="#" class="n-menu__link">
+                    <i class="n-menu__icon" style="background-image: url(img/icons/navigator/1.svg);"></i>
+                    <span class="n-menu__title">
+							Кошик
+						</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Подключение плагинов (скрипты) -->
+<script src="libs/jquery/jquery.min.js?v3.7.1"></script>
+<script src="js/lazyload.js"></script>
+<script src="libs/slick/slick.min.js?v1.8.1"></script>
+<script src="libs/jquery.inputmask.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+<!-- Подключение скриптов сайта -->
+<script src="js/common.js"></script>
+<script src="js/sliders.js"></script>
+
+<div class="modal" id="feedback-form" style="display: none;">
+    <div class="container">
+        <div class="m-img" style="background-image: url(img/modal/dogs.webp);">
+            <a href="/" class="m-img__logo" style="background-image: url(img/footer/logo.svg);"></a>
+        </div>
+        <div class="m-info">
+            <div class="m-info__title fz35 fw700">
+                З вами на зв`язку
+            </div>
+            <div class="m-info__form">
+                <form action="">
+                    <input type="text" name="name" class="m-info__input" placeholder="Ім’я" autocomplete="off">
+                    <input type="text" name="phone" class="m-info__input phone" placeholder="+ 380 (__) __-__-___" autocomplete="off">
+                    <button type="submit" class="m-info__button button button-2">
+                        Надіслати
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="header-menu" style="display: none; background-color: #fff;">
+    <div class="container container-noflex">
+
+        <div class="h-lang fz16 ff-Montserrat">
+            <a href="javascript:void(0);" class="h-lang__current">
+                UA
+            </a>
+            <ul class="h-lang__list" style="display: none;">
+                <li class="h-lang__item">
+                    <a href="#" class="h-lang__link">
+                        UA
+                    </a>
+                </li>
+                <li class="h-lang__item">
+                    <a href="#" class="h-lang__link">
+                        RU
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="h-menu fz15">
+            <li class="h-menu__item">
+                <a href="#" class="h-menu__link">
+                    Доставка та оплата
+                </a>
+            </li>
+            <li class="h-menu__item">
+                <a href="#" class="h-menu__link">
+                    Повернення та обмін
+                </a>
+            </li>
+            <li class="h-menu__item">
+                <a href="#" class="h-menu__link">
+                    Про нас
+                </a>
+            </li>
+            <li class="h-menu__item">
+                <a href="#" class="h-menu__link">
+                    Контакти
+                </a>
+            </li>
+        </ul>
+
+        <div class="m-contacts">
+            <div class="m-contacts__title">
+                Зв’язатися з нами:
+            </div>
+            <div class="m-contacts__info">
+                ПН-ПТ з 10.00-18.00;  СБ з 10,00 до 14,00<br>
+                <a href="tel:+380 (93) 107-03-04">+380 (93) 107-03-04;</a>  <a href="tel:+380 (99) 107-03-04">+380 (99) 107-03-04</a>
+            </div>
+        </div>
+
+        <div class="m-social">
+            <div class="m-social__title">
+                Слідкуйте за нами:
+            </div>
+            <ul class="m-social__list">
+                <li class="m-social__item">
+                    <a href="#" class="m-social__link" style="background-image: url(img/icons/social/facebock.svg);"></a>
+                </li>
+                <li class="m-social__item">
+                    <a href="#" class="m-social__link" style="background-image: url(img/icons/social/instagram.svg);"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="m-wholesalers">
+            <a href="#" class="m-wholesalers__button button button-3">
+                Оптовим клієнтам
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal" id="categorys-more" style="display: none; background-color: #fff;">
+    <div class="container container-noflex">
+        <div class="m-title fz20 fw700">
+            Категорії
+        </div>
+        <ul class="m-catalog">
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/1.svg);"></i>
+                    Худі, кофти, светри та світшоти
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/2.svg);"></i>
+                    Зимові куртки та теплі комбінезони
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/3.svg);"></i>
+                    Костюми
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/4.svg);"></i>
+                    Новорічний та різдвяний одяг
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/5.svg);"></i>
+                    В’язані речі
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/6.svg);"></i>
+                    Дощовики та осінньо-весняні куртки
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/7.svg);"></i>
+                    Жилетки
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/8.svg);"></i>
+                    Шлейки та повідці
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/9.svg);"></i>
+                    Футболки та майки
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/10.svg);"></i>
+                    Плаття/Спідниці
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/11.svg);"></i>
+                    Піжами
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/12.svg);"></i>
+                    Взуття
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/13.svg);"></i>
+                    Аксесуари та засоби догляду
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/14.svg);"></i>
+                    Лежаки та спальні місця
+                </a>
+            </li>
+            <li class="m-catalog__item">
+                <a href="#" class="m-catalog__link">
+                    <i class="m-catalog__icon" style="background-image: url(img/category/15.svg);"></i>
+                    Переноски
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

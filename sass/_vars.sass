@@ -1,0 +1,9 @@
+@mixin transition($x)
+  transition: $x
+  -webkit-transition: $x
+  -moz-transition: $x
+  -ms-transition: $x
+  -o-transition: $x
+
+@function em($n, $fz: 16)
+  @return $n / $fz + em

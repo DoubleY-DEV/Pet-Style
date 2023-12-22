@@ -1,0 +1,647 @@
+@import "app/sass/_vars"
+
+@media (min-width: 768px)
+  .header-mob
+    display: none !important
+  .s3-categorys__item-mobshow
+    display: none !important
+  .mob-show
+    display: none !important
+  .s10-sort__filter
+    display: none !important
+  .s10-filter .m-title
+    display: none
+  .s10-mob
+    display: none
+
+@media (max-width: 767px)
+  .header-desc
+    display: none !important
+  .header-mob
+    padding: 0 em(26) 0 em(17)
+    height: em(90)
+  body
+    padding-bottom: em(65)
+    height: auto
+  .navigator
+    display: block
+    height: em(65)
+  .h-logo
+    display: block
+    height: auto
+    width: em(89)
+    &__img
+      display: block
+      width: 100%
+      height: auto
+  .h-burger
+    display: block
+    width: em(70)
+    height: em(50)
+    -webkit-background-size: contain
+    background-size: contain
+    background-position: center center
+    background-repeat: no-repeat
+    background-image: url(../img/icons/burger.svg)
+  .s1
+    padding: em(47) em(33) em(34)
+  .char
+    font-size: em(20)
+  .fz20, .fz20
+    font-size: em(14)
+  .fz89, .fz89
+    font-size: em(61)
+  .fz35, .fz35
+    font-size: em(16)
+  .button-2
+    font-size: em(13)
+  .s1-photos
+    align-items: flex-start
+    margin-top: em(-25)
+  .s1-photos__img
+    width: 48%
+    height: auto
+    padding-top: 80%
+  .s1-info__title
+    margin-bottom: em(2)
+  .s1-info__subtitle
+    margin-bottom: em(13, 16)
+  .s2
+    padding: em(49) em(19) em(49) em(19)
+  .s2-advantages
+    display: block
+  .s2-advantages__link
+    width: 100%
+    margin-bottom: em(25)
+    padding: em(30) em(14) em(33) em(38 + 50 + 23)
+    background-color: #FCFBFC
+    border-radius: em(13)
+    &:last-child
+      margin-bottom: 0
+  .s2-advantages__icon
+    left: em(38)
+    top: em(30)
+  .s2-advantages__row
+    padding-right: 0
+  .s2-advantages__description-col
+    .s2-advantages__row:first-child
+      padding-right: 0
+      max-width: em(134, 14)
+      margin-right: em(5, 14)
+  .slick-dots li button
+    width: em(8)
+    height: em(8)
+    border: none
+    padding: 0
+  .s1__slider .slick-dots
+    margin-bottom: em(-60)
+  .layout-0
+    -webkit-background-size: auto 100%
+    background-size: auto 100%
+    background-position: left center
+    width: em(90)
+    background-image: url(../img/layout/bable-1-mob.svg) !important
+    right: 0
+    left: auto
+    margin-left: 0
+    top: em(170)
+  .s3
+    border-radius: 0 em(40) 0 em(40)
+    padding: em(25) em(21) em(18)
+  .s3-categorys__item
+    width: 25%
+    padding-left: em(7)
+    padding-right:  em(7)
+    margin-bottom: em(20)
+  .s3-categorys
+    margin-left: em(-7)
+    margin-right: em(-7)
+  .fz40, .fz40
+    font-size: em(18)
+  .s3-info__title
+    max-width: em(299, 18)
+    margin-left: auto
+    margin-right: auto
+  .s3-categorys__icon
+    height: em(75)
+    border-radius: em(15)
+    -webkit-background-size: em(49) em(40)
+    background-size: em(49) em(40)
+    margin-bottom: em(6)
+  .s3-categorys__item-mobhide
+    display: none
+  .s3-categorys__item-mobshow
+    display: block
+  .fz18, .fz18
+    font-size: em(12)
+  .s3-categorys__title
+    padding-left: 0
+    padding-right: 0
+  .s4
+    padding: em(45) em(22) em(10) em(12)
+
+  .s4-discount
+    height: em(101)
+    -webkit-background-size: cover
+    background-size: cover
+    background-position: center center
+    background-image: url(../img/layout/index-discount-mob.svg)
+    align-items: flex-start
+    &::before
+      width: em(42)
+      height: em(49)
+      left: em(12)
+      top: em(3)
+    &__left
+      display: block
+      padding-left: em(64)
+      width: 100%
+      max-width: em(244)
+      padding-top: em(11)
+    &__center
+      display: block
+      left: auto
+      margin-left: auto
+      right: em(18)
+      top: em(-14)
+      &::before
+        content: ''
+        right: 0
+        left: 0
+        top: em(-12)
+        height: em(15)
+    &__right
+      display: none
+    &__plus
+      display: none
+    &__title
+      font-size: em(18)
+      max-width: none
+    &__percent
+      height: em(54, 14)
+      bottom: em(4, 14)
+    &__value
+      font-size: em(14)
+      line-height: em(20, 14)
+      text-align: right
+      padding-top: em(20, 14)
+    &__qr
+      width: em(130)
+    .mob-show
+      display: block
+  .s5
+    padding: em(50) em(20) em(17) em(20)
+  .layout-1
+    display: none !important
+  .layout-2
+    height: em(80)
+    width: em(80)
+    background-position: left center
+    bottom: em(-20)
+  .s5-seasons
+    margin-left: em(-4)
+    margin-right: em(-4)
+    padding-top: em(35)
+    &__item
+      padding-left: em(4)
+      padding-right: em(4)
+      margin-bottom: em(8)
+    &__link
+      height: em(270)
+    &__bottom
+      padding: em(18) em(50) em(17) em(23)
+      &::after
+        width: em(25)
+        height: em(25)
+        border-radius: em(5)
+        -webkit-border-radius: em(5)
+        -webkit-background-size: auto em(8)
+        background-size: auto em(8)
+        right: em(16)
+        bottom: em(16)
+    &__title
+      font-size: em(20)
+  .s6
+    padding: em(25) em(20) em(36)
+  .s6-slider
+    margin-left: em(-4)
+    margin-right: em(-4)
+    padding-left: 0
+    padding-right: 0
+    margin-top: em(30)
+    &__item
+      padding-left: em(4)
+      padding-right: em(4)
+    .slick-dots
+      bottom: em(-36)
+  .product
+    border-radius: em(25)
+    -webkit-border-radius: em(25)
+    &__top
+      height: em(190)
+    &__favorites
+      width: em(25)
+      height: em(25)
+      right: em(12)
+      top: em(18)
+      border-radius: em(6)
+      -webkit-border-radius: em(6)
+      -webkit-background-size: em(13) auto
+      background-size: em(13) auto
+    &__mark
+      font-size: em(12)
+      &-last
+        top: em(16, 12)
+      &-season
+    &__content
+      padding-left: em(15)
+      padding-right: em(11)
+    &__title
+      font-size: em(12)
+    &__size
+      margin-top: em(12)
+      &__item
+      &__link
+        font-size: em(12)
+        width: em(29, 12)
+        height: em(15, 12)
+    &__code
+      font-size: em(12)
+      margin-top: em(12, 12)
+    &__bottom
+      margin-top: em(10)
+    &__price
+      font-size: em(18)
+    &__basket
+      width: em(25)
+      height: em(25)
+      border-radius: em(6)
+      -webkit-background-size: em(12) auto
+      background-size: em(12) auto
+  .s7
+    padding: em(50) em(20)
+  .description
+    font-size: em(13)
+    h1, h2, h3, h4, h5
+      margin-bottom: em(10)
+  .s7-info
+    &__bottom
+    &__more
+      font-size: em(13)
+  .s7-info-open .s7-info__bottom
+    padding-top: 0
+  .f-dog, .f-char, .f-logo, .f-info__text
+    display: none
+  .f-up
+    right: em(46)
+    left: auto
+    margin-left: auto
+  .footer
+    padding-left: 0
+    padding-right: 0
+    padding-top: em(18)
+    padding-bottom: em(36)
+    &__top
+      padding-left: em(32)
+      padding-right: em(32)
+      padding-bottom: em(15)
+    &__center
+      padding-left: em(38)
+      padding-right: em(38)
+      padding-top: em(17)
+      padding-bottom: 0
+      align-items: flex-start
+    &__bottom
+      padding-left: em(34)
+      padding-right: em(18)
+      padding-top: em(23)
+
+  .f-social__item
+    margin-left: em(15)
+  .f-social__link
+    width: em(30)
+    height: em(30)
+  .fz15, .fz15
+    font-size: em(13)
+  .h-menu
+    width: em(130, 13)
+    display: block
+    margin-top: em(55 - 17, 13)
+    &__item
+      margin-left: 0
+      margin-bottom: em(10)
+      &:last-child
+        margin-bottom: 0
+  .f-info__title
+    font-size: em(20)
+  .f-info__row
+    justify-content: center
+    margin-top: em(23)
+  .button-3
+    font-size: em(13)
+    &:focus
+      font-size: em(13)
+    &:hover
+      font-size: em(13)
+    &:active
+      font-size: em(13)
+  .f-info__copy
+    text-align: left
+    margin-top: em(39, 15)
+    font-size: em(15)
+  .fancybox__slide
+    padding: 0
+  .modal .h-menu
+    width: 100%
+    padding-left: em(40, 13)
+    padding-right: em(40, 13)
+    margin-bottom: em(30, 13)
+    margin-top: 0
+  .modal .h-menu__item
+    margin-bottom: em(22, 13)
+  .h-lang
+    display: block
+    width: em(30)
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: em(43)
+    margin-top: em(17)
+  .fancybox__content > .f-button.is-close-btn, .is-compact .fancybox__content > .f-button.is-close-btn
+    width: em(25)
+    height: em(25)
+    right: em(13)
+    top: em(13)
+  .m-title
+    font-size: em(20)
+  .m-img
+    width: 100%
+    border-radius: 0
+    -webkit-border-radius: 0
+    height: em(182)
+    -webkit-background-size: cover
+    background-size: cover
+  .m-img__logo
+    width: em(74)
+    height: em(74)
+    left: 20%
+    bottom: 5%
+  .m-info
+    width: 100%
+    border-radius: 0
+    -webkit-border-radius: 0
+    padding: em(39) em(33) em(41)
+  .m-info__title
+    font-size: em(20)
+  .m-info__button
+    font-size: em(14)
+  input[type=text], input[type=email], input[type=password]
+    font-size: em(14)
+  .s8
+    display: none
+  .s9
+    display: none
+  .s10-filter
+    display: none
+  .s10-catalog__top
+    display: none
+  .s10
+    padding: em(35) em(20)
+  .s10-banner
+    margin-top: 0
+    background-position: center center
+    height: em(200)
+    align-items: flex-start
+    padding-top: em(23)
+  .s10-banner__content
+    margin-left: em(20)
+  .s10-banner__title
+    font-size: em(35)
+  .s10-banner__bottom
+    align-items: flex-start
+    margin-left: em(24)
+    margin-top: em(18)
+  .s10-banner__text
+    font-size: em(15)
+    max-width: em(70, 15)
+  .s10-banner__percent
+    font-size: em(55)
+    margin-bottom: 0
+    margin-left: em(10, 55)
+    margin-top: em(-10, 55)
+  .s10-banner__link
+    bottom: em(5)
+    right: em(11)
+  .s10-sort__tags
+    display: none
+  .s10-sort__active
+    font-size: em(12)
+  .s10-sort__link
+    font-size: em(12)
+  .s10-sort__list
+    width: auto
+    left: 0
+    right: 0
+    margin-left: 0
+  .s10-sort__filter
+    display: inline-block
+    font-size: em(12)
+    color: #032640
+    padding-left: em(30, 12)
+    position: relative
+    border: none
+    background-color: transparent
+    outline: none
+    &:hover
+      font-size: em(12)
+    &:focus
+      font-size: em(12)
+    &:active
+      font-size: em(12)
+    &::before
+      content: ''
+      display: block
+      background-image: url(../img/icons/filter-mob.svg)
+      width: em(18)
+      height: em(9)
+      -webkit-background-size: contain
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center center
+      position: absolute
+      left: 0
+      top: 50%
+      margin-top: em(-9 / 2)
+  .s10-filter
+    width: 100%
+    padding: em(13) em(20) em(35)
+  .s10-mob
+    margin-top: em(30)
+    margin-bottom: em(26)
+  .s10-mob .s10-filter__title
+    padding-left: em(24, 20)
+    padding-right: em(24, 20)
+  .s10-mob .s10-sort__tags
+    display: flex
+    margin-top: em(17)
+  .s10-filter__group
+    padding-left: em(24)
+    padding-top: em(21)
+  .s10-filter__buttons
+    display: block
+    text-align: center
+    margin-top: em(32)
+  .s10-filter__button
+    font-weight: 400
+    background-color: #FFB806
+    font-size: em(14)
+    padding: em(14, 14) em(55, 14)
+  .s10-goods
+    margin-left: em(-4)
+    margin-right: em(-4)
+  .s10-goods__item
+    flex: 0 50%
+    padding-left: em(4)
+    padding-right: em(4)
+    padding-bottom: em(18)
+  .s10-pagination
+    display: none
+  .s10-more
+    padding-top: em(35 - 18)
+
+  .s11
+    padding: em(35) em(20) 0
+  .s11-slider__nav
+    display: none
+  .s11-slider__for
+    width: 100%
+  .s11-info
+    width: 100%
+    margin-bottom: em(20)
+    padding-left: 0
+  .s11-slider
+    width: 100%
+    margin-bottom: em(20)
+    padding-right: 0
+    .slick-arrow
+      bottom: auto
+      top: 50%
+      transform: rotate(-90deg)
+      -webkit-transform: rotate(-90deg)
+      margin-top: em(-37.5 / 2)
+    .slick-prev
+      left: em(-10)
+      transform: rotate(90deg)
+      -webkit-transform: rotate(90deg)
+    .slick-next
+      right: em(-10)
+      left: auto
+  .s11-info__title
+    font-size: em(20)
+  .s11-info__code
+    margin: em(15, 13) 0
+    font-size: em(13)
+  .s11-options__title
+    font-size: em(13)
+  .s11-options__link
+    font-size: em(13)
+  .s11-options__list-color .s11-options__link-disable .s11-options__color::after
+    font-size: em(14.5, 13)
+  .s11-info__price
+    margin-top: em(20, 30)
+    font-size: em(30)
+  .s11-info__bottom
+    margin-top: em(20)
+    padding-right: 0
+  .s11-counter__input
+    font-size: em(20)
+    height: em(40, 20)
+  .s11-counter__button
+    height: em(40)
+  .s12
+    padding: em(15) em(20) em(50)
+  .s12-faq
+    max-width: none
+  .s12-faq__title
+    font-size: em(14)
+  .s12-paw
+    display: none
+  .s13
+    padding-left: 0
+    padding-right: 0
+  .s13-tabs
+    padding-left: em(10)
+    padding-right: em(10)
+  .s13-tabs__link
+    font-size: em(20)
+    padding: em(10) em(10)
+  .s13-content
+    padding-top: em(20)
+  .s13-description
+    padding-left: em(20, 13)
+    padding-right: em(20, 13)
+  .s13-sizer
+    display: block
+    margin-top: em(20)
+    padding-left: em(20)
+    padding-right: em(20)
+    &__left
+      width: 100%
+      padding-right: 0
+    &__right
+      width: 100%
+      padding-left: 0
+      margin-top: em(20)
+  .s13-sizer__title
+    font-size: em(20)
+    margin-bottom: em(15, 20)
+  table
+    font-size: em(13)
+  .s13-sizer__text
+    font-size: em(14)
+  .s13-sizer__dop
+    margin-top: em(10, 14)
+  .s13-warning__tag
+    font-size: em(20)
+    padding: em(10, 20) em(15, 20)
+  .s13-warning__text
+    padding-left: em(15)
+  .s13-warning__list
+    margin-top: 0
+  .s13-warning__list__item
+    font-size: em(14)
+  .s14
+    padding: em(35) em(20) 0
+    position: relative
+  .s14-info
+    max-width: none
+  .s14-info__title
+    font-size: em(30)
+  .s14-info__subtitle
+    font-size: em(19)
+  .s14-img
+    display: none
+  .s14-social
+    margin-top: em(20)
+  .s14-social__link
+    width: em(40)
+    height: em(40)
+  .s14-social__item
+    margin-left: em(10)
+  .s15
+    padding: em(35) em(20) 0
+  .s15-goods
+    margin-left: em(-4)
+    margin-right: em(-4)
+  .s15-goods__item
+    flex: 0 50%
+    padding-left: em(4)
+    padding-right: em(4)
+    padding-bottom: em(18)
+  .s6-last
+    margin-bottom: em(50)
+
+//@media(max-width: 429px)
+//  body
+//    font-size: em(11)
+
+

@@ -1,0 +1,287 @@
+@import "app/sass/_vars"
+
+.footer
+  background-color: #F8FAFF
+  padding: em(30) em(81) em(34)
+  &__top
+    padding: 0 em(6) em(14) em(84)
+    border-bottom: em(2) solid #0C2638
+    position: relative
+    z-index: 2
+  &__center
+    padding: em(14) em(6) em(14) em(84)
+    position: relative
+  &__bottom
+    padding: em(147) em(298) 0
+    position: relative
+
+.f-char
+
+.f-social
+  display: flex
+  justify-content: flex-end
+  &__item
+    display: block
+    margin-left: em(25)
+    &:first-child
+      margin-left: 0
+  &__link
+    width: em(37)
+    height: em(37)
+    display: block
+    -webkit-background-size: contain
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center center
+
+.f-up
+  background-image: url(../img/icons/arrow-up.svg)
+  display: block
+  width: em(35)
+  height: em(35)
+  background-color: #0C2638
+  background-repeat: no-repeat
+  background-position: center center
+  -webkit-background-size: em(21) auto
+  background-size: em(21) auto
+  border-radius: em(10)
+  -webkit-border-radius: em(10)
+  position: absolute
+  bottom: em(-18)
+  left: 50%
+  margin-left: em(-10.5)
+
+.f-address
+  max-width: em(184, 15)
+
+.f-menu
+  &__item
+  &__link
+
+.f-logo
+  position: absolute
+  left: 50%
+  top: em(52)
+  margin-left: em(-149 / 2)
+  &__link
+    display: block
+    width: em(149)
+    height: auto
+  &__img
+    display: block
+    width: 100%
+    height: auto
+
+.f-info
+  &__title
+    text-align: center
+  &__row
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    max-width: em(616)
+    margin-left: auto
+    margin-right: auto
+    margin-top: em(25)
+  &__text
+    font-weight: 700
+    text-align: left
+  &__button
+  &__copy
+    margin-top: em(52, 15)
+    text-align: center
+    a
+      &:hover
+        text-decoration: underline
+
+.f-dog
+  position: absolute
+  left: em(4)
+  bottom: em(-15)
+  &__img
+    display: block
+    width: em(313)
+    height: auto
+
+/* Модалки */
+.modal
+  width: em(464 * 2)
+  padding: 0
+  background-color: transparent
+  position: relative
+
+.m-img
+  width: 50%
+  -webkit-background-size: 175% auto
+  background-size: 175% auto
+  background-repeat: no-repeat
+  background-position: bottom center
+  border-radius: em(24) 0 0 em(24)
+  -webkit-border-radius: em(24) 0 0 em(24)
+  position: relative
+  &__logo
+    display: block
+    width: em(143)
+    height: em(142)
+    -webkit-background-size: contain
+    background-size: contain
+    background-position: center center
+    background-repeat: no-repeat
+    position: absolute
+    left: em(33)
+    bottom: em(17)
+
+.m-info
+  background-color: #ffffff
+  width: 50%
+  padding: em(59) em(39) em(54)
+  border-radius: 0 em(24) em(24) 0
+  -webkit-border-radius: 0 em(24) em(24) 0
+  text-align: center
+  &__title
+    text-transform: uppercase
+    margin-bottom: em(28, 35)
+  &__input
+    margin-bottom: em(22, 18)
+  &__button
+    margin-top: em(6)
+
+.navigator
+  padding: em(14) em(44) em(11)
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: #FCFBFC
+  z-index: 99
+  display: none
+
+.n-menu
+  display: flex
+  justify-content: space-between
+  width: 100%
+  align-items: flex-start
+  flex-wrap: wrap
+  &__item
+    display: block
+  &__link
+    display: block
+    opacity: .6
+    &-active
+      opacity: 1
+  &__icon
+    width: em(25)
+    height: em(25)
+    display: block
+    background-repeat: no-repeat
+    background-position: center center
+    -webkit-background-size: contain
+    background-size: contain
+    margin-left: auto
+    margin-right: auto
+  &__title
+    display: block
+    width: 100%
+    text-align: center
+    color: #0C2638
+    font-size: em(12)
+
+/* Мобильные popup */
+.m-contacts
+  padding: em(12) em(40) em(15)
+  border-top: em(1) solid #E6E6E6
+  &__title
+    font-size: em(20)
+    font-weight: 700
+    color: #032640
+    display: block
+    width: 100%
+    margin-bottom: em(22, 20)
+  &__info
+    display: block
+    font-size: em(15)
+    color: #576778
+    line-height: 1.7
+    a
+      font-size: em(14,15)
+      font-weight: 600
+      color: #576778
+
+.m-social
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  padding: em(12) em(40) em(15)
+  border-top: em(1) solid #E6E6E6
+  &__title
+    font-size: em(20)
+    font-weight: 700
+    color: #032640
+    display: block
+  &__list
+    display: flex
+    justify-content: flex-end
+  &__item
+    display: block
+    margin-left: em(34)
+    &:first-child
+      margin-left: 0
+  &__link
+    display: block
+    width: em(40)
+    height: em(40)
+    background-repeat: no-repeat
+    background-position: center center
+    -webkit-background-size: contain
+    background-size: contain
+
+.m-wholesalers
+  display: flex
+  justify-content: center
+  margin-top: em(38 - 15)
+  margin-bottom: em(37)
+  &__button
+    font-weight: 500
+    display: inline-block
+
+.m-title
+  margin-top: em(14, 20)
+  display: block
+  text-align: center
+  padding-left: em(57, 20)
+  padding-right: em(57, 20)
+
+.m-catalog
+  padding: em(33) em(57) em(39)
+  &__item
+    display: block
+    width: 100%
+    margin-bottom: em(20)
+    &:last-child
+      margin-bottom: 0
+  &__link
+    font-size: em(15)
+    color: #032640
+    display: block
+    position: relative
+    padding-left: em(35 + 16)
+    font-weight: 500
+    &:hover
+      font-weight: 700
+      .m-catalog__icon
+        background-color: #FCD039
+  &__icon
+    display: block
+    width: em(35, 15)
+    height: em(30, 15)
+    background-color: #E6EEFF
+    border-radius: em(5, 15)
+    position: absolute
+    left: 0
+    top: em(-6, 15)
+    -webkit-background-size: em(20, 15) em(20, 15)
+    background-size: em(20, 15) em(20, 15)
+    background-repeat: no-repeat
+    background-position: center center

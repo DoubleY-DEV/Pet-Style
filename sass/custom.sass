@@ -1,0 +1,464 @@
+@import "app/sass/_vars"
+
+/* reset style */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small,
+strike, strong, sub, sup, tt, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, nav, output, ruby, section,
+time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+button, button:active, button:focus,
+input, input:active, input:focus
+	outline: none
+
+ol, ul
+	list-style: none
+
+.hidden
+	display: none
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+a
+	color: inherit
+	font-family: -apple-system, "Gilroy", sans-serif
+	@include transition(all 0.5s ease)
+	font-size: inherit
+	font-weight: inherit
+	line-height: inherit
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+button,
+input[type="submit"]
+	@include transition(all 0.5s ease)
+
+table
+	width: 100%
+	color: #000000
+	font-size: em(15)
+	border: em(1, 15) solid #D8DCE6
+	border-radius: em(22, 15)
+	border-spacing: 0
+	text-align: center
+	overflow: hidden
+	font-weight: 500
+	tbody
+
+	tr
+		&:last-child
+			td
+				border-bottom: none
+	th
+		border-right: em(1, 15) solid #D8DCE6
+		border-bottom: em(1, 15) solid #D8DCE6
+		background-color: #FAFAFA
+		padding: em(12, 15) em(10, 15)
+		vertical-align: middle
+		&:last-child
+			border-right: none
+	td
+		border-right: em(1, 15) solid #D8DCE6
+		border-bottom: em(1, 15) solid #D8DCE6
+		padding: em(12, 15) em(10, 15)
+		vertical-align: middle
+		&:last-child
+			border-right: none
+
+body, html
+	height: 100%
+
+body
+	color: #032640
+	font-family: -apple-system, "Gilroy", sans-serif
+	font-size: 16px
+	font-weight: 400
+	line-height: 1.2
+	min-width: 429px
+	width: 100%
+	overflow-x: hidden
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	position: relative
+
+header
+	position: relative
+	z-index: 3
+
+.page
+	flex: 1 0 auto
+	position: relative
+	z-index: 2
+
+footer
+	flex: 0 0 auto
+	position: relative
+	z-index: 2
+
+/* slider */
+.slick-dots
+	display: flex
+	justify-content: center
+	align-items: center
+	position: absolute
+	z-index: 2
+	bottom: 0
+	left: 0
+	right: 0
+	li
+		margin-left: em(27)
+		button
+			display: block
+			width: em(12)
+			height: em(12)
+			border-radius: 50%
+			-webkit-border-radius: 50%
+			color: transparent
+			overflow: hidden
+			border: none
+			cursor: pointer
+			padding: 0
+		&:first-child
+			margin-left: 0
+	li.slick-active
+		button
+			background-color: #0C2638
+
+.slick-arrow
+	width: em(38)
+	height: em(38)
+	color: transparent
+	overflow: hidden
+	background-color: #FAFAFA
+	border: none
+	border-radius: 50%
+	-webkit-border-radius: 50%
+	position: absolute
+	top: 50%
+	margin-top: em(-38 / 2)
+	background-image: url(../img/icons/slider-angle.svg)
+	background-repeat: no-repeat
+	background-position: center center
+	cursor: pointer
+	z-index: 3
+	&:hover
+		background-color: #FCD039
+.slick-prev
+	left: em(-38 / 2)
+	transform: rotate(-180deg)
+	-webkit-transform: rotate(-180deg)
+.slick-next
+	right: em(-38 / 2)
+
+/* fancybox */
+.fancybox__content>.f-button.is-close-btn,
+.is-compact .fancybox__content>.f-button.is-close-btn
+	bottom: auto
+	left: auto
+	right: em(23)
+	top: em(23)
+	background-color: #0C2638
+	opacity: 1
+	background-image: url(../img/modal/close.svg)
+	background-repeat: no-repeat
+	background-position: center center
+	-webkit-background-size: em(10) auto
+	background-size: em(10) auto
+	border-radius: 50%
+	-webkit-border-radius: 50%
+	svg
+		display: none
+
+.fancybox__backdrop
+	background-color: #0C2638
+	opacity: .8
+
+/* Размер шрифта */
+.fz14,
+.fz14
+	font-size: em(14)
+
+.fz15,
+.fz15
+	font-size: em(15)
+
+.fz16,
+.fz16
+	font-size: em(16)
+
+.fz18,
+.fz18
+	font-size: em(18)
+
+.fz20,
+.fz20
+	font-size: em(20)
+
+.fz30,
+.fz30
+	font-size: em(30)
+
+.fz35,
+.fz35
+	font-size: em(35)
+
+.fz40,
+.fz40
+	font-size: em(40)
+
+.fz55,
+.fz55
+	font-size: em(55)
+
+.fz64,
+.fz64
+	font-size: em(64)
+
+.fz89,
+.fz89
+	font-size: em(89)
+
+/* Шрифты */
+.ff-Gilroy
+	font-family: -apple-system, "Gilroy", sans-serif
+
+.ff-Montserrat
+	font-family: -apple-system, "Montserrat", sans-serif
+
+.fw700
+	font-weight: 700
+.fw400
+	font-weight: 400
+
+.container
+	display: flex
+	flex-wrap: wrap
+	&-noflex
+		display: block
+	&-jcsb
+		justify-content: space-between
+	&-jcfs
+		justify-content: flex-start
+	&-aic
+		align-items: center
+
+.button
+	display: inline-block
+	border: none
+	outline: none
+	cursor: pointer
+	&-1
+		font-size: em(18)
+		padding: em(10, 18) em(37, 18)
+		background-color: #E6EEFF
+		border-radius: em(15, 18)
+		&:hover
+			background-color: #032640
+			color: #ffffff
+	&-2
+		font-size: em(16)
+		padding: em(16) em(45)
+		background-color: #032640
+		color: #ffffff
+		border-radius: em(48)
+		-webkit-border-radius: em(48)
+		&:hover
+			background-color: #FCD039
+			color: #032640
+			font-weight: 700
+	&-3
+		font-size: em(16)
+		padding: em(16) em(45)
+		background-color: #FCD039
+		color: #032640
+		border-radius: em(48)
+		-webkit-border-radius: em(48)
+		font-weight: 700
+		&:hover
+			background-color: #032640
+			color: #ffffff
+			font-weight: 700
+		&:focus
+			font-weight: 700
+		&:active
+			font-weight: 700
+
+.char
+	font-size: em(25)
+	color: inherit
+	font-weight: 400
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+	display: block
+	width: 100%
+	font-size: em(18)
+	height: em(47, 18)
+	border: em(1, 18) solid #D8DCE6
+	background-color: transparent
+	border-radius: em(24)
+	-webkit-border-radius: em(24)
+	padding: 0 em(10)
+	text-align: center
+	font-weight: 500
+	color: #000000
+	&::placeholder
+		color: #576778
+		opacity: 1
+
+.fw500
+	font-weight: 500
+
+.fw600
+	font-weight: 600
+
+.fw700
+	font-weight: 700
+
+.ttu
+	text-transform: uppercase
+
+/* Описание */
+.description
+	color: #032640
+	h1
+		font-size: em(40)
+		display: block
+		width: 100%
+		margin-bottom: em(35, 40)
+	h2
+		font-size: em(35)
+		display: block
+		width: 100%
+		margin-bottom: em(35, 35)
+	h3
+		font-size: em(30)
+		display: block
+		width: 100%
+		margin-bottom: em(30, 30)
+	h4
+		font-size: em(25)
+		display: block
+		width: 100%
+		margin-bottom: em(25, 25)
+	h5
+		font-size: em(20)
+		display: block
+		width: 100%
+		margin-bottom: em(20, 20)
+	p
+		font-size: em(18)
+		display: block
+		margin-bottom: em(15, 18)
+	b, strong
+		font-weight: 700
+	i
+		font-style: italic
+	ul
+		font-size: em(18)
+		margin-bottom: em(15, 18)
+		li
+			display: block
+			text-indent: em(14, 18)
+			position: relative
+			margin-bottom: em(15, 18)
+			&::before
+				content: ''
+				text-indent: 0
+				display: block
+				width: em(3, 18)
+				height: em(3, 18)
+				border-radius: 50%
+				-webkit-border-radius: 50%
+				background-color: #032640
+				position: absolute
+				left: 0
+				top: 0.55em
+	ol
+		counter-reset: item
+		font-size: em(18)
+		margin-bottom: em(15, 18)
+		li
+			display: block
+			text-indent: em(24, 18)
+			position: relative
+			margin-bottom: em(8, 18)
+			&::before
+				content: counters(item, ".") ". "
+				counter-increment: item
+				color: #000000
+				display: block
+				position: absolute
+				left: 0
+				top: 0
+				text-indent: 0
+	blockquote
+		display: block
+		width: 100%
+		font-size: em(18)
+		position: relative
+		padding: em(10, 18) 0 em(10, 18) em(46, 18)
+		margin-bottom: em(15, 18)
+		&::before
+			content: ''
+			display: block
+			width: em(10, 18)
+			position: absolute
+			height: auto
+			top: 0
+			bottom: 0
+			left: em(18, 18)
+			background-color: #0C2638
+			border-radius: em(5, 18)
+
+/**/
+.layout
+	position: absolute
+	z-index: -1
+	&-0
+		width: em(155)
+		height: em(131)
+		-webkit-background-size: contain
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center center
+		left: 50%
+		top: em(42)
+		margin-left: em(-155/2)
+		z-index: 1
+	&-1
+		height: em(223)
+		width: em(90)
+		-webkit-background-size: auto 100%
+		background-size: auto 100%
+		background-repeat: no-repeat
+		background-position: left center
+		right: 0
+		top: em(-80)
+	&-2
+		height: em(223)
+		width: em(140)
+		-webkit-background-size: auto 100%
+		background-size: auto 100%
+		background-repeat: no-repeat
+		background-position: right center
+		left: 0
+		bottom: em(-60)
